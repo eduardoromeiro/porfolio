@@ -1,13 +1,36 @@
+:root {
+  --bg-color: #000;
+  --text-color: #f6f6f6;
+  --color: #22d4fd;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #000;
+  background-color: var(--bg-color);
 
   box-sizing: border-box;
-  height: 100vh;
+  /*height: 100vh; */
+}
+
+header.header {
+  padding: 2% 0 0 15%;
+}
+
+nav.menu {
+  display: flex;
+  gap: 80px;
+}
+
+header.header > nav.menu > a.link__menu {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color);
+  text-decoration: none;
 }
 
 main.conteudo__principal {
@@ -15,8 +38,7 @@ main.conteudo__principal {
 
   align-items: center;
   justify-content: space-between;
-
-  margin: 10%;
+  padding: 8% 15%;
 }
 
 section.conteudo {
@@ -27,30 +49,45 @@ section.conteudo {
 }
 
 h1.titulo__principal {
-  color: #f6f6f6;
+  color: var(--text-color);
   font-family: "Krona One", sans-serif;
   font-size: 36px;
 }
 
+h2.subtitulo {
+  color: var(--text-color);
+  font-family: "Krona One", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
 h1 > strong.titulo__destaque {
-  color: #22d4fd;
+  color: var(--color);
 }
 
 p {
-  color: #f6f6f6;
+  color: var(--text-color);
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
 
 div.links {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  gap: 32px;
 }
 
 a.link {
-  background-color: #22d4fd;
+  /* background-color: #22d4fd; */
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  border: 2px solid var(--color);
   border-radius: 16px;
-  color: #000;
+  color: var(--text-color);
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -59,4 +96,20 @@ a.link {
 
   padding: 21.5px 0;
   width: 280px;
+
+  transition: background 0.6s;
+}
+
+a.link:hover {
+  background-color: #272727;
+}
+
+footer > p {
+  color: var(--bg-color);
+  background-color: var(--color);
+  padding: 24px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
 }
